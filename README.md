@@ -1,6 +1,16 @@
+# Weekly tasks
+- Bewijzen en redeneren: test at the start of every lecture.
+- Bewijzen en redeneren: exercise session : prepare all exercises beforehand.
+- Bewijzen en redeneren: small homework assignment after every lecture.
+- Declaratieve talen: review course material before exercise sessions.
+- Lineaire algebra: Pearson - Always learning - my lab (online platform).
+- Logica: LogicPalet (can be done through the entire year).
+- Objectgericht programmeren: Before every lecture study the material to be seen in the lecture.
+- Wiskunde I: Exercises (see toledo) before every exercise sitting.
+
 # AI
 2 projects during the course of the semester. (25 hours) (8/20 points, deadlines to be announced soon)
-## Examination:
+### Examination:
 - Open-book exercise (50%)
 - Closed-book theory (50%)
 
