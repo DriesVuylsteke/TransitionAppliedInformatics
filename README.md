@@ -4,6 +4,7 @@
 - Bewijzen en redeneren: small homework assignment after every lecture.
 - Declaratieve talen: review course material before exercise sessions.
 - Lineaire algebra: Pearson - Always learning - my lab (online platform).
+- Lineaire algebra: Read the next chapter before the lesson.
 - Logica: LogicPalet (can be done through the entire year).
 - Objectgericht programmeren: Before every lecture study the material to be seen in the lecture.
 - Wiskunde I: Exercises (see toledo) before every exercise sitting.
