@@ -13,11 +13,23 @@ How to add a jar to an eclips project is explained [here](https://stackoverflow.
 If you are using version control the link to your external jar will probably not work on another computer. This method adds the jar with an relative link so it will not break when switching computers.
 
 - Right-click the project folder in Eclips and select Build Path > New Source Folder
+
+![Image 1](img/Image1.PNG)
+
 - Give the new folder a name (i.e. "lib") and click next.
+
+![Image 2](img/Image2.PNG)
+
 - Add the pattern "*.jar" to the first section of the wizard and click finish.
+
+![Image 3](img/Image3.PNG)
+
 - Copy the jar to the new folder you just created.
 - Right-click the project folder in Eclips and select Build Path > Configure Build Path.
 - Navigate to the Libraries-tab and click "Add Jars".
+
+![Image 4](img/Image4.PNG)
+
 - Navigate to your added resource folder and select the jar.
 - Done.
 
