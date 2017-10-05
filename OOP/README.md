@@ -28,7 +28,7 @@ If you are using version control the link to your external jar will probably not
 - Right-click the project folder in Eclips and select Build Path > Configure Build Path.
 - Navigate to the Libraries-tab and click "Add Jars".
 
-![Image 4](img/image4.PNG)
+![Image 4](img/Image4.PNG)
 
 - Navigate to your added resource folder and select the jar.
 - Done.
