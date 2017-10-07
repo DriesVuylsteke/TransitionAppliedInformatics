@@ -1,3 +1,9 @@
+# Deadlines !! :skull::skull::skull::skull:
+### Lineaire algebra (On Pearson MyMathLab)
+- **12 oktober 2017** - Basis kennis: zelftest 1
+- **12 oktober 2017** - Basis kennis: zelftest 2
+- **12 oktober 2017** - Voorbereiding: oefensessie LA 1
+
 # Weekly tasks
 - Bewijzen en redeneren: test at the start of every lecture.
 - Bewijzen en redeneren: exercise session : prepare all exercises beforehand.
