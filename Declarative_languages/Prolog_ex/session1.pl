@@ -186,7 +186,7 @@ maxmintree(node(C1-L, C2-R), V) :-
 
 /*
  * model oplossing
- /*
+ */
 minmaxtree(leaf(Result), Result).
 minmaxtree(node(C1-LTree, C2-_), Result) :-
 	C1 =< C2,
