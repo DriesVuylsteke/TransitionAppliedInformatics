@@ -183,3 +183,24 @@ maxmintree(node(C1-L, C2-R), V) :-
 		minmaxtree(R,V) % go right
 		)
 	).
+
+/*
+ * model oplossing
+ /*
+minmaxtree(leaf(Result), Result).
+minmaxtree(node(C1-LTree, C2-_), Result) :-
+	C1 =< C2,
+	maxmintree(LTree, Result).
+
+minmaxtree(node(C1-_, C2-RTree), Result) :-
+	C1 > C2,
+	maxmintree(RTree, Result).
+
+maxmintree(leaf(Result), Result).
+maxmintree(node(C1-_, C2-RTree), Result) :-
+	C1 < C2,
+	minmaxtree(RTree, Result).
+
+maxmintree(node(C1-LTree, C2-_), Result) :-
+	C1 >= C2,
+	minmaxtree(LTree, Result).
