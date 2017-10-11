@@ -117,10 +117,6 @@ eval(=(X,Y),Z) :-
 	eval(X,Z1),
 	eval(Y,Z2),
 	eval(eq(Z1,Z2),Z).
-
-eval(X,Y) :- 
-	eval(X,Z),
-	eval(Z,Y).
 	
 
 /**
@@ -154,3 +150,36 @@ choosedir_max(D,D-X,_,Z) :-
 	minmaxtree(X,Z).
 choosedir_max(D,_,D-X,Z) :-
 	minmaxtree(X,Z).
+	
+/**
+ * Other solution
+ */
+minmaxtree(leaf(X),X).
+minmaxtree(node(C1-L, C2-R), V) :-
+	Dir is max(C1,C2),
+	(
+		(
+		Dir = C2, % right is highest, or C1 = C2
+		maxmintree(L,V) % go left
+		)
+	;
+		(
+		Dir = C1, % left is highest
+		maxmintree(R, V) % go right
+		)
+	).
+
+maxmintree(leaf(X),X).
+maxmintree(node(C1-L, C2-R), V) :-
+	Dir is max(C1,C2),
+	(
+		(
+		Dir = C1, % left is highest or they are equal
+		minmaxtree(L, V) % go left
+		)
+	;
+		(
+		Dir = C2, %right is highest
+		minmaxtree(R,V) % go right
+		)
+	).
