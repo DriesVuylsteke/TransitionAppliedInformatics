@@ -1,13 +1,4 @@
 # Deadlines !! :skull::skull::skull::skull:
-### Lineaire algebra (On Pearson MyMathLab)
-- **10 oktober 2017** - chapter 2 is self-study material, questions will be allowed during the lecture that day
-- **12 oktober 2017** - Basis kennis: zelftest 1
-- **12 oktober 2017** - Basis kennis: zelftest 2
-- **12 oktober 2017** - Voorbereiding: oefensessie LA 1
-
-### Wiskunde 1
-- **09 oktober 2017** - Oefenzitting 1: Voorbereiding: 2.17(c), 2.22(a,b), 3.1, 3.7(a,c), 3.8(a,c,j), 3.11, 3.14(a,c)
-- **13 oktober 2017** - Oefenzitting 2: Voorbereiding: 3.21(a,c,i,l), 3.22(a,d), 3.25(a,b), 3.36, 3.38(c), 3.39(d,h), 3.42(a), 3.43(a,d), 3.46
 
 # Weekly tasks
 - Bewijzen en redeneren: test at the start of every lecture.
