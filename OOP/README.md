@@ -75,3 +75,10 @@ Follow the next steps to generate the javadoc for your project.
   - @Throws
 
 Full documentation can be found [here](http://www.cs.kuleuven.be/books/OOPWithJava/doc/index.html)
+
+## Activation assert (Nominal programming)
+
+- In your menubar select Window > preferences
+- Expand the java tab in the list on the left and select "Installed JRE"
+- Double click the JRE used by Eclipse to run your project
+- In the textbox for "Default VM arguments" insert "-ea"
