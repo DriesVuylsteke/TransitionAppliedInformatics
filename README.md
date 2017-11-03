@@ -5,7 +5,9 @@
         - Excersices from H9 will not appear on the exam.
 - Declaratieve Talen: Read Chapter 2 (First Steps in Haskell) before the first lesson on **31/10**
         - Unless you know everything about zygohistomorphic prepromorphisms
-- Lineaire Algebra: preparation LA3 on Pearson **31/10**
+- Lineaire Algebra: preparation LA2 on Pearson **10/11**
+- Lineaire Algebra: preparation LA3 on Pearson **24/11**
+- Lineaire Algebra: preparation LA4 on Pearson **01/12**
 - Declaratieve talen: Test Prolog **09/10**
 
 # Weekly tasks
