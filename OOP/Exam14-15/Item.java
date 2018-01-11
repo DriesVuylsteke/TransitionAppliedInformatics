@@ -19,7 +19,7 @@ public abstract class Item {
 	 * its identification. 
 	 * 
 	 * @return 
-	 * 		| result == (identification > 0)
+	 * 	| result == (identification >= 0)
 	 */
 	@Raw
 	public abstract boolean canHaveAsIdentification(long identification);
