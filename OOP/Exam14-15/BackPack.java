@@ -24,7 +24,7 @@ public class BackPack extends Item {
 	 * Check whether this backpack can have the given identification as its
 	 * identification.
 	 * 
-	 * @return | result == (identification > 0) && (identification % 2 == 0)
+	 * @return | (identification % 2 == 0)
 	 */
 	@Override
 	@Raw
