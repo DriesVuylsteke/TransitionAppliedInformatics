@@ -1,4 +1,6 @@
-	import java.math.BigInteger;
+// Author: Daniël Mertens
+
+import java.math.BigInteger;
 import java.util.function.Predicate;
 
 import diskItemsStart.*;
