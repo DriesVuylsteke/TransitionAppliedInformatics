@@ -83,6 +83,9 @@ public class BackPack extends Item {
 	 * 
 	 * @post all the items in the items collection have been added to the backpack
 	 *       if they fit in the backpack
+	 *	| for each item in items
+	 *	| if(this.canHaveAsDirectItem && item != null)
+	 		then new.contains(item)
 	 */
 	public void addAllItems(Collection<? extends Item> items) {
 		if (items == null)
