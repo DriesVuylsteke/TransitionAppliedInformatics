@@ -1,0 +1,98 @@
+package sets;
+
+import java.util.stream.Stream;
+
+import be.kuleuven.cs.som.annotate.Basic;
+
+/**
+ * An interface of unordered collections of elements of type T.
+ */
+public interface UnorderedCollection<T> extends Iterable<T> {
+	/**
+	 * Return the number of occurrences of the given element in this unordered *
+	 * collection.
+	 */
+	@Basic
+	int getNbOccurrencesOf(T element);
+
+	/**
+	 * Check whether this unordered collection can have the given number of
+	 * occurrences of the given element.
+	 * 
+	 * @param elem:
+	 *            the element to be checked
+	 * @param number:
+	 *            the number of occurences wished in the collection
+	 * 
+	 * @return result == (elem != null)
+	 */
+	boolean canHaveAsNbOccurrencesOf(T elem, int number);
+
+	/**
+	 * Return the total number of elements in this unordered collection. *
+	 * 
+	 * @return ...
+	 */
+	int getNbElements();
+
+	/**
+	 * Return an array containing all the elements of this unordered collection. *
+	 * If an element occurs several times in this unordered collection, it * occurs
+	 * the same number of times in the resulting array. * * @return ...
+	 */
+	Object[] toArray();
+
+	/**
+	 * Add the given element to this unordered collection.
+	 * 
+	 * @param elem:
+	 *            the element to be added to the collection
+	 * 
+	 * @pre | elem != null
+	 * 
+	 * @post | new.getNbOccurencesOf(elem) == old.getNbOccurencesOf(elem) + 1
+	 */
+	void add(T elem);
+
+	/**
+	 * Return a sequential stream with this unordered collection as its source.
+	 */
+	default Stream<T> stream() {
+		// Implementation irrelevant for the exercise.
+		Stream.Builder<T> builder = Stream.builder();
+		for (T element : this)
+			builder.accept(element);
+		return builder.build();
+	}
+
+	/**
+	 * Add all the elements of the other unordered collection to this unordered
+	 * collection.
+	 * 
+	 * @param other
+	 *            The other unordered collection.
+	 * 
+	 * 
+	 * @throws NullPointerException
+	 *             | other.contains(null)
+	 * 
+	 * @throws IllegalArgumentException
+	 *             | for each element in other do:
+	 *             !canHaveAsNbOccurrencesOf(getNbOccurrencesOf(element)+1)
+	 * 
+	 * @post for each element in other do new.getNbOccurrencesOf(element) ==
+	 *       this.getNbOccurrencesOf(element) + 1
+	 */
+	// Fill in the signature of the method addAll.
+	public default void addAll(UnorderedCollection<T> other) throws NullPointerException, IllegalArgumentException {
+		for (T element : other) {
+			if (element != null)
+				throw new NullPointerException(); // the collection can never contain a null value, therefor attempting
+													// to add it raises an exception.
+			if (!canHaveAsNbOccurrencesOf(element, getNbOccurrencesOf(element) + 1))
+				throw new IllegalArgumentException();
+
+			this.add(element);
+		}
+	}
+}
