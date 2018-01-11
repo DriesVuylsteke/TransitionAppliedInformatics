@@ -23,8 +23,7 @@ public class BackPack extends Item {
 	/**
 	 * Check whether this backpack can have the given identification as its
 	 * identification.
-	 * 
-	 * @return | (identification % 2 == 0)
+	 * @return | result == (identification > 0) && (identification % 2 == 0)
 	 */
 	@Override
 	@Raw
@@ -32,7 +31,9 @@ public class BackPack extends Item {
 		return identification > 0 && identification % 2 == 0;
 	}
 
-	/** * Check whether this backpack has the given item as one of its items. */
+	/** * Check whether this backpack has the given item as one of its items. 
+	 * param item: the item to be checked
+	 * */
 	@Basic
 	@Raw
 	public boolean hasAsItem(Item item) {
@@ -46,7 +47,7 @@ public class BackPack extends Item {
 
 	/**
 	 * * Check whether this backpack can have the given item as * one of its items.
-	 * 
+	 * @param item: the item to be checked
 	 * @return ...
 	 */
 	@Raw
@@ -56,7 +57,7 @@ public class BackPack extends Item {
 
 	/**
 	 * Add the given item to this backpack.
-	 * 
+	 * @param item: an item to be added to the backpack
 	 * @throws IllegalArgumentException
 	 *             | !canHaveAsDirectItem(item)
 	 * @throws NullPointerException
@@ -70,7 +71,6 @@ public class BackPack extends Item {
 			throw new NullPointerException();
 		if (!canHaveAsDirectItem(item))
 			throw new IllegalArgumentException();
-
 		content.add(item);
 		item.setHolder(this);
 	}
@@ -78,22 +78,26 @@ public class BackPack extends Item {
 	/**
 	 * Add to this backpack all items of the given collection * that fit into this
 	 * backpack.
+	 * @param items: a collection of items to be added to the backpack
+	 * 
 	 * 
 	 * @post all the items in the items collection have been added to the backpack
 	 *       if they fit in the backpack
 	 */
-	public void addAllItems(Iterable<? extends Item> items) {
+	public void addAllItems(Collection<? extends Item> items) {
 		if (items == null)
 			return;
 		for (Item i : items) {
-			addAsItem(i);
+			try { // Try-catch to not stop the loop when an invalid item is added (this item is skipped this way)
+				addAsItem(i);
+			} catch (NullPointerException | IllegalArgumentException e) {}
 		}
 	}
 
 	/**
 	 * Return the set of all items in this backpack that satisfy the given
 	 * predicate.
-	 * 
+	 * @param predicate: the predicate that has to be satisfied
 	 * @pre ... | predicate != null
 	 */
 	public Set<Item> getAllItemsSatisfying(Predicate<Item> predicate) {
