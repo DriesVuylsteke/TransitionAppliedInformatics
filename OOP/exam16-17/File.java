@@ -1,3 +1,5 @@
+// Author: Daniël Mertens
+
 package diskItemsStart;
 
 import java.math.BigInteger;
