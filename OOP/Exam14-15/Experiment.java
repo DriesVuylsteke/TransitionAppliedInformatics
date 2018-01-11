@@ -17,7 +17,7 @@ public class Experiment {
 		// with the digit 0.
 		// You must use an anonymous class at this point.
 		
-		thePack.getAllItemsSatisfying(new Predicate<Item>() {
+		Set<Item> result = thePack.getAllItemsSatisfying(new Predicate<Item>() {
 			@Override
 			public boolean test(Item i) {
 				return i.getIdentification() % 10 == 0;
