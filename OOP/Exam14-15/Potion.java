@@ -9,7 +9,7 @@ public class Potion extends Item {
 	 * identification. 
 	 * 
 	 * @return ... 
-	 * 		| (identification > 0) && (identification % 2 == 1)
+	 * 	| (identification % 2 == 1)
 	 */
 	@Override
 	@Raw
