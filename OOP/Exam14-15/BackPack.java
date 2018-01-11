@@ -14,7 +14,7 @@ import be.kuleuven.cs.som.annotate.*;
  */
 public class BackPack extends Item {
 
-	private HashSet<Item> content = new HashSet<>();
+	private Set<Item> content = new HashSet<>();
 
 	public BackPack(int i) {
 		// TODO Auto-generated constructor stub
@@ -97,7 +97,7 @@ public class BackPack extends Item {
 	 * @pre ... | predicate != null
 	 */
 	public Set<Item> getAllItemsSatisfying(Predicate<Item> predicate) {
-		HashSet<Item> satisfyingItems = new HashSet<>();
+		Set<Item> satisfyingItems = new HashSet<>();
 		for(Item i : content) {
 			if(predicate.test(i))
 				satisfyingItems.add(i);
